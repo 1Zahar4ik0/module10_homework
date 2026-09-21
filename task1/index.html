@@ -32,10 +32,9 @@
             background-color: #1768cf;
         }
 
-        svg {
+        .button-icon {
             width: 24px;
             height: 24px;
-            fill: currentColor;
         }
 
         .hidden {
@@ -45,13 +44,8 @@
 </head>
 <body>
     <button id="icon-button" type="button">
-        <svg id="icon-01" viewBox="0 0 16 16" aria-hidden="true">
-            <path d="M1 1h5v2H3v3H1V1zm9 0h5v5h-2V3h-3V1zM1 10h2v3h3v2H1v-5zm12 0h2v5h-5v-2h3v-3z"/>
-        </svg>
-
-        <svg id="icon-02" class="hidden" viewBox="0 0 16 16" aria-hidden="true">
-            <path d="M5 1v4H1V3h2V1h2zm6 0h2v2h2v2h-4V1zM1 11h4v4H3v-2H1v-2zm10 0h4v2h-2v2h-2v-4z"/>
-        </svg>
+        <img id="icon-01" class="button-icon" src="icon_01.svg" alt="">
+        <img id="icon-02" class="button-icon hidden" src="icon_02.svg" alt="">
 
         Сменить иконку
     </button>
