@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Смена иконки</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f5f8;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 18px;
+            border: 0;
+            border-radius: 6px;
+            background-color: #2f80ed;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1768cf;
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="icon-button" type="button">
+        <svg id="icon-01" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M1 1h5v2H3v3H1V1zm9 0h5v5h-2V3h-3V1zM1 10h2v3h3v2H1v-5zm12 0h2v5h-5v-2h3v-3z"/>
+        </svg>
+
+        <svg id="icon-02" class="hidden" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M5 1v4H1V3h2V1h2zm6 0h2v2h2v2h-4V1zM1 11h4v4H3v-2H1v-2zm10 0h4v2h-2v2h-2v-4z"/>
+        </svg>
+
+        Сменить иконку
+    </button>
+
+    <script>
+        const button = document.querySelector('#icon-button');
+        const icon01 = document.querySelector('#icon-01');
+        const icon02 = document.querySelector('#icon-02');
+
+        button.addEventListener('click', function () {
+            icon01.classList.toggle('hidden');
+            icon02.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
